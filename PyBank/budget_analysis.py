@@ -128,3 +128,12 @@ print("Average  Change: $" + str(avg_change))
 print("Greatest Increase in Profits: "  + MaxValueDate + " $(" + str(maxvalue) + ")")
 print("Greatest Decrease in Profits: " +  MinValueDate + " $(" + str(minvalue) + ")")
 
+#write to text file
+with open("Output.txt", "w") as text_file:
+    text_file.write("Financial Analysis")
+    text_file.write("----------------------------\n")
+    text_file.write("Total Months: {0}\n".format(Colsnum))
+    text_file.write("Total: $ {0}\n".format(totalP_L))
+    text_file.write("Average  Change: $ {0}\n".format(avg_change))
+    text_file.write("Greatest Increase in Profits: $"  + MaxValueDate + " $(" + str(maxvalue) + ")\n")
+    text_file.write("Greatest Decrease in Profits: " +  MinValueDate + " $(" + str(minvalue) + ")\n")  
